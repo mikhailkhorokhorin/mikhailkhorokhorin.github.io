@@ -8,10 +8,10 @@ export default function TerminalHeader() {
       gap: '1rem',
       fontSize: '14px',
       marginBottom: '3rem',
-      marginTop: '3rem',
+      marginTop: '1rem',
       justifyContent: 'center'
     }}>
-       <pre className="user-select-none" style={{ margin: 0 }}>
+       <pre className="ascii-art user-select-none" style={{ margin: 0 }}>
         {`___  ____ _    _           _ _
 |  \\/  (_) |  | |         (_) |
 | .  . |_| | _| |__   __ _ _| |
@@ -20,7 +20,7 @@ export default function TerminalHeader() {
 \\_|  |_/_|_|\\_\\_| |_|\\__,_|_|_|`}
       </pre>
 
-      <pre className="user-select-none" style={{ margin: 0 }}>
+      <pre className="ascii-art user-select-none" style={{ margin: 0 }}>
         {`_   ___                      _    _                _
 | | / / |                   | |  | |              (_)
 | |/ /| |__   ___  _ __ ___ | | _| |__   ___  _ __ _ _ __

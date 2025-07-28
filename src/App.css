@@ -36,11 +36,12 @@ a:hover {
   text-decoration: underline;
 }
 
-.ascii {
+.ascii-art {
+  font-family: monospace;
   white-space: pre;
-  font-size: 14px;
-  color: #00ff66;
-  margin-bottom: 2rem;
+  font-size: clamp(12px, 2.5vw, 15px);
+  line-height: 1.1;
+  user-select: none;
 }
 
 .click-effect {
