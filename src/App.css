@@ -39,7 +39,7 @@ a:hover {
 .ascii-art {
   font-family: monospace;
   white-space: pre;
-  font-size: clamp(12px, 2.5vw, 15px);
+  font-size: clamp(8px, 2.5vw, 15px);
   line-height: 1.1;
   user-select: none;
 }
