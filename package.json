@@ -1,0 +1,33 @@
+{
+  "name": "mikhailkhorokhorin.ru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikhailkhorokhorin/mikhailkhorokhorin.ru.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikhailkhorokhorin/mikhailkhorokhorin.ru/issues"
+  },
+  "homepage": "https://mikhailkhorokhorin.github.io/mikhailkhorokhorin.ru",
+  "dependencies": {
+    "framer-motion": "^12.23.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^7.0.6"
+  }
+}
