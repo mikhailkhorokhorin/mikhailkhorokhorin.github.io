@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -17,7 +19,7 @@
   "bugs": {
     "url": "https://mikhailkhorokhorin/mikhailkhorokhorin.ru/issues"
   },
-  "homepage": "https://mikhailkhorokhorin.ru",
+  "homepage": "https://mikhailkhorokhorin.ru/",
   "dependencies": {
     "framer-motion": "^12.23.11",
     "react": "^19.1.0",
