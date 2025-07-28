@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import './App.css';
 import TerminalHeader from './components/TerminalHeader';
 import About from './components/About';
@@ -7,6 +8,27 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 
 const asciiSymbols = ['*', '#', '@', '%', '&', '+', '='];
+
+const withFadeIn = (WrappedComponent) => {
+  return function AnimatedComponent(props) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        style={{ width: '100%' }}
+      >
+        <WrappedComponent {...props} />
+      </motion.div>
+    );
+  };
+};
+
+const AnimatedTerminalHeader = withFadeIn(TerminalHeader);
+const AnimatedAbout = withFadeIn(About);
+const AnimatedExperience = withFadeIn(Experience);
+const AnimatedProjects = withFadeIn(Projects);
+const AnimatedContact = withFadeIn(Contact);
 
 function App() {
   const [effects, setEffects] = useState([]);
@@ -42,15 +64,30 @@ function App() {
   return (
     <div className="fullscreen-wrapper" onClick={handleClick}>
       <div className="terminal">
-        <TerminalHeader />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
+        <AnimatedTerminalHeader />
+        <AnimatedAbout />
+        <AnimatedExperience />
+        <AnimatedProjects />
+        <AnimatedContact />
       </div>
 
       {effects.map(({ id, x, y, symbol }) => (
-        <span key={id} className="click-effect" style={{ left: x, top: y }}>
+        <span
+          key={id}
+          className="click-effect"
+          style={{
+            position: 'absolute',
+            left: x,
+            top: y,
+            pointerEvents: 'none',
+            userSelect: 'none',
+            fontFamily: 'monospace',
+            color: '#0f0',
+            fontWeight: 'bold',
+            fontSize: '20px',
+            animation: 'floatUp 0.7s ease-out forwards',
+          }}
+        >
           {symbol}
         </span>
       ))}
